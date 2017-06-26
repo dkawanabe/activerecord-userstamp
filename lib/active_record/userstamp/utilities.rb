@@ -33,7 +33,7 @@ module ActiveRecord::Userstamp::Utilities
 
     [config.creator_attribute.present? && columns.include?(config.creator_attribute.to_s),
      config.updater_attribute.present? && columns.include?(config.updater_attribute.to_s),
-     config.deleter_attribute.present? && columns.include?(config.deleter_attribute.to_s)]
+     config.deleter_attribute.present? && columns.include?(config.deleter_attribute.to_s),]
   rescue ActiveRecord::StatementInvalid => _
     nil
   end
